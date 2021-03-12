@@ -1,0 +1,129 @@
+body{
+  font-weight: 400;
+  line-height: 1.7;
+  color: $color-white;
+  font-family: 'Lato', sans-serif;
+}
+
+.mainname {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+  .heading__primary {
+    margin-bottom: 6rem;
+    backface-visibility: hidden;
+
+    &__appname {
+      display: block;
+      font-size: 6rem;
+      color: $color-white;
+      letter-spacing: 3.5rem;
+      text-transform: uppercase;
+      font-weight: 400;
+      animation-name: moveInLeft;
+      animation-duration: 1s;
+      animation-timing-function: ease-out;
+      backface-visibility: hidden;
+      /* animation-delay: 2s; */
+      /* animation-iteration-count: 3; */
+
+      @include respond(phone){
+        letter-spacing: 3rem;
+        font-size: 5rem;
+      }
+    }
+
+    &__caption {
+      display: block;
+      font-size: 2rem;
+      color: $color-white;
+      text-transform: uppercase;
+      letter-spacing: 1.75rem;
+      font-weight: 700;
+      animation-name: moveInRight;
+      animation-duration: 1s;
+      animation-timing-function: ease-out;
+      backface-visibility: hidden;
+      margin-bottom: 3rem;
+
+      @include respond(phone){
+        letter-spacing: 1.5rem;
+        font-size: 2rem;
+      }
+    }
+
+  }
+}
+
+.header__primary2 {
+  font-size: 3.5rem;
+  display: inline-block;
+  background-image: linear-gradient(to right, $color-light, $color-dark);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: all .2s;
+  
+  @include respond(tab-land){
+    margin-top: 4rem;
+  }
+
+  @include respond(tab-port){
+    font-size: 3rem;
+  }
+
+  &:hover{
+    transform: skewY(2deg) skewX(25deg) scale(1.1);
+    text-shadow: .5rem 1rem 2rem rgba($color-black, 0.2);
+  }
+}
+
+.header__tertiary{
+  color: #3f3f44;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  @include respond(tab-port){
+    font-size: 1.4rem;
+  }
+}
+
+.paragraph{
+  color: $color-brown-dark;
+  font-size: 1.6rem;
+
+  &:not(:last-child){
+    margin-bottom: 3rem;
+  }
+}
+
+.btn-small:link,
+.btn-small:visited{
+  font-size: 1.6rem;
+  display:inline-block;
+  text-decoration: none;
+  color:$color-org;
+  background-color: $color-white;
+  padding: 5px;
+  border-bottom: 1px solid $color-org;
+  transition: all .2s;
+  border-radius: 2px;
+
+  &:hover{
+    transform: translateY(-3px);
+    background-color: $color-org;
+    color:$color-white;
+    box-shadow: 0 1rem 2rem rgba($color-black, .15);
+  }
+
+  &:active{
+    transform:translateY(0);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, .15);
+  }
+}

@@ -1,0 +1,106 @@
+.section--about{
+  background-color: $color-light-grey;
+  padding: 25rem 0;
+  margin-top: -20rem;
+
+  @include respond(tab-land){
+    margin-top: -25rem;
+  }
+}
+
+.section--features{
+  background-image: linear-gradient(to right bottom, rgba($color-light, 0.7), rgba($color-org, 0.7), rgba(40, 180, 133, 0.7)), url("img/nat-4.jpg");
+  background-size: cover;
+  padding: 20rem 0;
+  transform: skewY(-7deg);
+  margin-top: -15rem;
+
+  @include respond(tab-port){
+    margin-top: -10rem;
+  }
+
+  @include respond(phone){
+    margin-top: -20rem;
+    padding: 10rem 0;
+    padding-bottom: 5rem;
+  }
+
+  & > *{
+  transform: skewY(7deg);
+  }
+
+  .row{
+    @include respond(tab-port){
+      margin: auto;
+    } 
+  }
+}
+
+.section__tours{
+  background-color: $color-light-grey;
+  padding: 25rem 0 20rem 0;
+  margin-top: -10rem;
+
+  @include respond(tab-port){
+    margin-top: -14rem;
+    // margin-bottom: -20rem;
+  }
+}
+
+.section__story{
+  position: relative;
+  padding: 8rem 0;
+  
+  // @include respond(tab-port){
+  //   margin-top: -20rem;
+  // }
+}
+
+.section__form--book{
+  padding: 15rem;
+  background-image: linear-gradient(to right bottom, $color-light, $color-dark);
+
+  // .row{
+  //   @include respond(tab-port){
+  //     margin-left: 15rem  !important;
+  //   }  
+
+    // @include respond(phone){
+    //   margin-left: 35.5rem !important;
+    // } 
+  }
+ 
+.book{
+  background-image: linear-gradient(105deg, rgba($color-white, .9) 0%, rgba($color-white, .9) 50%, transparent 50%), url("img/nat-10.jpg");
+  background-size: cover;
+  border-radius: 3px;
+  box-shadow: 2rem 2rem 4rem rgba($color-black, .5);
+
+  @include respond(tab-land){
+    background-image: linear-gradient(105deg, rgba($color-white, .9) 0%, rgba($color-white, .9) 100%), url("img/nat-10.jpg");
+  }
+
+  @include respond(phone){
+    background-image: linear-gradient(to right, rgba($color-white, .8) 0%, rgba($color-white, .8) 100%), url("img/nat-10.jpg");
+    // text-align: center;
+  }
+}
+
+.form--book{
+  width: 50%;
+  padding: 6rem;
+
+  @include respond(tab-land){
+    width: 70%;
+  }
+
+  @include respond(tab-port){
+    width: 100%;
+  }
+
+  @include respond(phone){
+    width: 100%;
+    padding: 3rem;
+  }
+}
+
